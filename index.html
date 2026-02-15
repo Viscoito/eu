@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Rodrigues Maciel | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="dark">
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <header class="topbar glass">
+      <a href="#" class="brand">VRM</a>
+      <div class="controls">
+        <label class="control" for="langSelect">
+          <span data-i18n="nav.language">Idioma</span>
+          <select id="langSelect" aria-label="Language selector">
+            <option value="pt">PT</option>
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+            <option value="ja">日本語</option>
+          </select>
+        </label>
+        <button id="themeToggle" class="theme-toggle" type="button" data-i18n="nav.themeDark">🌙 Escuro</button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="home glass" id="home">
+        <p class="pill" data-i18n="hero.badge">Desenvolvedor Criativo • Artista Digital</p>
+        <h1>Victor Rodrigues Maciel</h1>
+        <p data-i18n="hero.short">
+          Crio soluções digitais que misturam lógica, estética e interatividade. Aqui na home fica um resumo rápido; nas abas abaixo você encontra os detalhes.
+        </p>
+      </section>
+
+      <section class="tabs glass" aria-label="portfolio tabs">
+        <div class="tab-list" role="tablist">
+          <button class="tab active" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true" data-tab="about" data-i18n="tabs.about">Sobre</button>
+          <button class="tab" role="tab" id="tab-projects" aria-controls="panel-projects" aria-selected="false" data-tab="projects" data-i18n="tabs.projects">Projetos</button>
+          <button class="tab" role="tab" id="tab-gallery" aria-controls="panel-gallery" aria-selected="false" data-tab="gallery" data-i18n="tabs.gallery">Artes</button>
+          <button class="tab" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" data-tab="contact" data-i18n="tabs.contact">Contato</button>
+        </div>
+
+        <div class="tab-panels">
+          <article class="panel active" id="panel-about" role="tabpanel" aria-labelledby="tab-about" data-panel="about">
+            <h2 data-i18n="about.title">Sobre mim</h2>
+            <p data-i18n="about.text1">Desde 2010, atuo integrando código e criatividade para criar ferramentas funcionais e experiências visuais de qualidade.</p>
+            <p data-i18n="about.text2">Tenho perfil autodidata, adaptação rápida em ambientes remotos e foco em transformar ideias em soluções objetivas.</p>
+            <h3 data-i18n="about.skillsTitle">Habilidades principais</h3>
+            <ul class="chips">
+              <li>JavaScript / TypeScript</li>
+              <li>React / Next.js</li>
+              <li>HTML / CSS</li>
+              <li>Chatbots e automações</li>
+              <li>Pesquisa para apps e jogos</li>
+              <li>Artes digitais / assets</li>
+              <li>Live2D (produção)</li>
+            </ul>
+          </article>
+
+          <article class="panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" data-panel="projects" hidden>
+            <h2 data-i18n="projects.title">Projetos em destaque</h2>
+            <div class="cards">
+              <article class="card">
+                <h3 data-i18n="projects.p1.title">Bots para comunidades</h3>
+                <p data-i18n="projects.p1.text">Chatbots para IRC com coleta de dados e melhoria de precisão de respostas.</p>
+              </article>
+              <article class="card">
+                <h3 data-i18n="projects.p2.title">Fluxos com IA</h3>
+                <p data-i18n="projects.p2.text">Refinamento de prompts e scripts para acelerar produção criativa e técnica.</p>
+              </article>
+              <article class="card">
+                <h3 data-i18n="projects.p3.title">Pipeline de arte + Live2D</h3>
+                <p data-i18n="projects.p3.text">Produção de assets visuais e modelos Live2D seguindo briefing e padrão de qualidade.</p>
+              </article>
+            </div>
+          </article>
+
+          <article class="panel" id="panel-gallery" role="tabpanel" aria-labelledby="tab-gallery" data-panel="gallery" hidden>
+            <h2 data-i18n="gallery.title">Galeria de artes</h2>
+            <p data-i18n="gallery.text">Espaço dedicado para ilustrações, concept art e peças finalizadas.</p>
+            <div class="gallery">
+              <figure class="gallery-item"><span>🎨</span><figcaption>Artwork 01</figcaption></figure>
+              <figure class="gallery-item"><span>🖌️</span><figcaption>Artwork 02</figcaption></figure>
+              <figure class="gallery-item"><span>✨</span><figcaption>Artwork 03</figcaption></figure>
+              <figure class="gallery-item"><span>🌈</span><figcaption>Artwork 04</figcaption></figure>
+            </div>
+            <p class="small" data-i18n="gallery.live2d">Extra: área de Live2D com modelo seguindo o mouse pode entrar como próxima fase.</p>
+          </article>
+
+          <article class="panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" data-panel="contact" hidden>
+            <h2 data-i18n="contact.title">Contato</h2>
+            <p data-i18n="contact.text">Vamos conversar sobre freelas, projetos, arte digital ou Live2D.</p>
+            <div class="contact-list">
+              <a href="mailto:victormaa@hotmail.com">victormaa@hotmail.com</a>
+              <a href="https://linkedin.com/in/victormaciel" target="_blank" rel="noreferrer">linkedin.com/in/victormaciel</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
