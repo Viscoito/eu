@@ -1,23 +1,17 @@
 # Portfolio (GitHub Pages)
 
-Este projeto é um site estático (HTML/CSS/JS) pronto para publicar no **GitHub Pages**.
+Site estático (HTML/CSS/JS) com tema claro/escuro Catppuccin, suporte multilíngue e estrutura pronta para integração Live2D.
 
-## Deploy automático (recomendado)
+## Publicar no GitHub Pages (automático)
 
-1. Suba este repositório no GitHub.
-2. Vá em **Settings → Pages**.
-3. Em **Build and deployment**, escolha **Source: GitHub Actions**.
-4. Faça push na branch `main` (ou na branch padrão do repo).
-5. Aguarde o workflow finalizar em **Actions**.
-6. Seu site ficará disponível em:
-   - `https://SEU_USUARIO.github.io/`
-   - ou `https://SEU_USUARIO.github.io/NOME_DO_REPOSITORIO/` (se não for repo de usuário)
-
-## Observação importante sobre caminhos
-
-Como este projeto usa caminhos relativos (`styles.css`, `script.js`), ele funciona tanto em:
-- domínio de usuário (`SEU_USUARIO.github.io`), quanto
-- projeto (`SEU_USUARIO.github.io/NOME_DO_REPOSITORIO`).
+1. Suba o repositório no GitHub.
+2. Acesse **Settings → Pages**.
+3. Em **Build and deployment**, selecione **GitHub Actions**.
+4. Faça push para `main`.
+5. Aguarde workflow em **Actions**.
+6. URL final:
+   - `https://SEU_USUARIO.github.io/` (repo de usuário)
+   - `https://SEU_USUARIO.github.io/NOME_DO_REPO/` (repo de projeto)
 
 ## Rodar localmente
 
@@ -25,4 +19,10 @@ Como este projeto usa caminhos relativos (`styles.css`, `script.js`), ele funcio
 python3 -m http.server 4173
 ```
 
-Depois abra: `http://localhost:4173`
+## Preparar Live2D (próxima fase)
+
+1. Crie a pasta `assets/live2d/`.
+2. Adicione o arquivo `model.model3.json` e os assets gerados pelo Cubism.
+3. Ao abrir o site, a seção VTuber detecta automaticamente se o model JSON existe.
+
+> Observação: durante esta execução, acesso direto ao repositório externo `IuriGuerreiro/Live2D-web-Playground` retornou HTTP 403, então o projeto foi preparado com fallback local para você plugar os arquivos do Cubism diretamente.
