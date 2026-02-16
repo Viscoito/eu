@@ -1,0 +1,39 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "Visnha.moc3",
+    "Textures": [
+      "Visnha.4096/texture_00.png",
+      "Visnha.4096/texture_01.png",
+      "Visnha.4096/texture_02.png",
+      "Visnha.4096/texture_03.png",
+      "Visnha.4096/texture_04.png",
+      "Visnha.4096/texture_05.png",
+      "Visnha.4096/texture_06.png"
+    ],
+    "Physics": "Visnha.physics3.json",
+    "DisplayInfo": "Visnha.cdi3.json"
+  },
+  "Expressions": [
+    {
+      "Name": "Vistra",
+      "File": "expressions/Vistra.exp3.json"
+    },
+    {
+      "Name": "Visnha",
+      "File": "Visnha.exp3.json"
+    }
+  ],
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": ["ParamMouthForm", "ParamMouthOpenY"]
+    },
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": ["ParamEyeLOpen", "ParamEyeROpen"]
+    }
+  ]
+}

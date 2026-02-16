@@ -1,0 +1,115 @@
+{
+    "Type": "Live2D Expression",
+    "Parameters": [
+        {
+            "Id": "ParamNairastraToggle25",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle26",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle27",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle28",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle24",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle29",
+            "Value": 0.19925864040851594,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle30",
+            "Value": 0.20349813997745515,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle31",
+            "Value": 0.19925779104232789,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle33",
+            "Value": 0.2034975290298462,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle32",
+            "Value": 0.1950187236070633,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle20",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle22",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle23",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle1",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle10",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle11",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle12",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle13",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle14",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle3",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle6",
+            "Value": 0.6989926695823669,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle7",
+            "Value": 0.49602627754211428,
+            "Blend": "Add"
+        }
+    ]
+}

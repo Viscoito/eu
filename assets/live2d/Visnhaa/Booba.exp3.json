@@ -1,0 +1,25 @@
+{
+    "Type": "Live2D Expression",
+    "Parameters": [
+        {
+            "Id": "ParamNairastraToggle31",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle12",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle43",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamNairastraToggle44",
+            "Value": 0.0,
+            "Blend": "Add"
+        }
+    ]
+}
