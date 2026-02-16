@@ -108,7 +108,6 @@ async function fetchJson(path) {
 function renderDiary(entries) {
   const list = document.getElementById("diaryList");
   if (!list) return;
-  const coreModel = model.internalModel.coreModel;
 
   const sorted = [...entries].sort((a, b) => b.date.localeCompare(a.date));
   list.innerHTML = sorted
@@ -339,6 +338,7 @@ async function initVtuber() {
   });
 
   const model = await PIXI.live2d.Live2DModel.from(modelPath);
+  const coreModel = model.internalModel.coreModel;
   app.stage.addChild(model);
 
   function fitModelToViewport() {
@@ -359,47 +359,47 @@ async function initVtuber() {
 
   fitModelToViewport();
   new ResizeObserver(fitModelToViewport).observe(canvas);
+  coreModel.addParameterValueById("ParamNairastraToggle18", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle66", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle65", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle16", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle15", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle55", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle59", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle60", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle62", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle67", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle68", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle56", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle58", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle73", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle50", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle25", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle51", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle26", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle17", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle52", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle19", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle27", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle28", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle34", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle35", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle36", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle24", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle64", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle29", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle30", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle31", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle33", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle32", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle20", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle21", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle22", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle23", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle45", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle46", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle53", 1.0);
+  coreModel.addParameterValueById("ParamNairastraToggle70", 1.0);
 }
-coreModel.addParameterValueById("ParamNairastraToggle18", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle66", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle65", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle16", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle15", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle55", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle59", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle60", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle62", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle67", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle68", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle56", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle58", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle73", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle50", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle25", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle51", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle26", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle17", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle52", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle19", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle27", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle28", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle34", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle35", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle36", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle24", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle64", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle29", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle30", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle31", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle33", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle32", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle20", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle21", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle22", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle23", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle45", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle46", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle53", 1.0);
-coreModel.addParameterValueById("ParamNairastraToggle70", 1.0);
 initContent();
 initVtuber();
