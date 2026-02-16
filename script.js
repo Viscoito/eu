@@ -291,45 +291,63 @@ applyLanguage(savedLang);
 const cubismModel = "./assets/live2d/Visnhaa/Visnha.model3.json";
 
 (async function main() {
+  const canvas = document.getElementById("canvas");
   const app = new PIXI.Application({
-    view: document.getElementById("canvas"),
+    view: canvas,
     autoStart: true,
-    // resizeTo: window,
     backgroundAlpha: 0,
-    width: "400",
-    height: "400",
+    resizeTo: canvas,
+    antialias: true,
   });
+
   const model = await PIXI.live2d.Live2DModel.from(cubismModel);
   app.stage.addChild(model);
-  model.scale.set(0.1);
-
-  // const margin = -60;
-
-  // function positionBottomRight() {
-  //   model.x = 0;
-
-  //   const bounds = model.getBounds();
-
-  //   model.x = app.screen.width - bounds.width - margin - bounds.x;
-  // }
-
-  // requestAnimationFrame(positionBottomRight);
-
-  // window.addEventListener("resize", () => {
-  //   requestAnimationFrame(positionBottomRight);
-  // });
-  model.pivot.set(model.width / 2, model.height - 2500);
-
-  // app.stage.on("pointermove", (e) => {
-  //   const pos = e.data.global;
-
-  //   const faceX = model.x;
-  //   const faceY = model.y - model.height * 0.5;
-
-  //   model.focus(pos.x - faceX, pos.y - faceY);
-  // });
 
   const coreModel = model.internalModel.coreModel;
+
+  function fitModelToViewport() {
+    const canvasWidth = canvas.clientWidth || 280;
+    const canvasHeight = canvas.clientHeight || 360;
+    const bounds = model.getLocalBounds();
+    const widthScale = (canvasWidth * 0.9) / bounds.width;
+    const heightScale = (canvasHeight * 0.95) / bounds.height;
+    const baseScale = Math.min(widthScale, heightScale);
+
+    model.scale.set(baseScale);
+
+    model.position.set(
+      canvasWidth / 2 - (bounds.x + bounds.width / 2) * baseScale,
+      canvasHeight - (bounds.y + bounds.height) * baseScale,
+    );
+
+    model.pivot.set(0, 0);
+  }
+
+  fitModelToViewport();
+
+  const resizeObserver = new ResizeObserver(() => {
+    fitModelToViewport();
+  });
+  resizeObserver.observe(canvas);
+
+  const focusData = { x: 0, y: 0, active: false };
+
+  app.ticker.add(() => {
+    if (!focusData.active) return;
+
+    const bounds = model.getBounds();
+    const headX = bounds.x + bounds.width * 0.5;
+    const headY = bounds.y + bounds.height * 0.21;
+
+    model.focus(focusData.x - headX, focusData.y - headY);
+  });
+
+  window.addEventListener("pointermove", (event) => {
+    focusData.x = event.clientX;
+    focusData.y = event.clientY;
+    focusData.active = true;
+  });
+
 
   coreModel.addParameterValueById("ParamNairastraToggle18", 1.0);
   coreModel.addParameterValueById("ParamNairastraToggle66", 1.0);

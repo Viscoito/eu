@@ -31,3 +31,17 @@ select,.theme-toggle{border:1px solid var(--border);background:var(--surface-str
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
 @media (max-width:980px){.topbar{grid-template-columns:1fr;gap:.6rem}.topnav{justify-content:flex-start}.large-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:580px){.large-gallery{grid-template-columns:1fr}.gallery-item.tall,.gallery-item.wide{grid-row:auto;grid-column:auto}}
+
+
+#canvas{
+  position:fixed;
+  right:clamp(8px,2vw,24px);
+  bottom:clamp(8px,2vh,24px);
+  width:clamp(140px,24vw,320px);
+  aspect-ratio:3/4;
+  height:auto;
+  max-height:55vh;
+  background:transparent;
+  pointer-events:none;
+  z-index:12;
+}
