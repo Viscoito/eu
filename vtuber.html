@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VTuber | Victor Rodrigues Maciel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.2/dist/browser/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/index.min.js"></script>
+  </head>
+  <body data-theme="dark"><div class="bg-gradient"></div><div class="bg-orb orb-a"></div><div class="bg-orb orb-b"></div>
+    <header class="topbar glass"><a href="index.html" class="brand">VRM</a><nav class="topnav" aria-label="Main navigation"><a href="index.html">Home</a><details class="nav-dropdown"><summary>Sobre</summary><div class="dropdown-menu"><a href="about.html">Sobre mim</a><a href="diary.html">Diário</a><a href="contact.html">Contato</a></div></details><a href="projects.html">Projetos</a><details class="nav-dropdown"><summary>Galeria</summary><div class="dropdown-menu"><a href="gallery.html">Artes</a><a href="photos.html">Fotos</a></div></details><a href="commissions.html">Comissões</a><a href="vtuber.html">VTuber</a></nav><div class="controls"><label class="control" for="langSelect"><span data-i18n="nav.language">Idioma</span><select id="langSelect"><option value="pt">PT</option><option value="en">EN</option><option value="es">ES</option><option value="ja">日本語</option></select></label><button id="themeToggle" class="theme-toggle" data-i18n="nav.themeDark">🌙 Escuro</button></div></header>
+    <main class="wrap"><section class="glass section reveal"><h1>VTuber Live2D</h1><p class="lead">Modelo centralizado no canvas para visualização e demonstração.</p><div class="vtuber-stage"><canvas id="vtuberCanvas" aria-label="VTuber canvas"></canvas></div></section></main>
+    <script src="script.js"></script>
+  </body>
+</html>

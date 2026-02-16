@@ -1,0 +1,66 @@
+{
+  "photos": [
+    {
+      "id": "photo-2026-02-12",
+      "date": "2026-02-12",
+      "location": "São Paulo",
+      "caption": "Fim de tarde com tons frios na cidade.",
+      "theme": "urbano",
+      "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80",
+      "tags": [
+        "cidade",
+        "arquitetura",
+        "jogos"
+      ]
+    },
+    {
+      "id": "photo-2026-02-04",
+      "date": "2026-02-04",
+      "location": "Estúdio",
+      "caption": "Setup de trabalho antes de iniciar uma sessão criativa.",
+      "theme": "workspace",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+      "tags": [
+        "setup",
+        "tecnologia",
+        "comida"
+      ]
+    },
+    {
+      "id": "photo-2026-01-18",
+      "date": "2026-01-18",
+      "caption": "Trilha curta em manhã nublada.",
+      "theme": "natureza",
+      "image": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80",
+      "tags": [
+        "natureza",
+        "trilha",
+        "animais"
+      ]
+    },
+    {
+      "id": "photo-2025-12-30",
+      "date": "2025-12-30",
+      "location": "Rio de Janeiro",
+      "caption": "Noite com reflexos intensos na orla.",
+      "theme": "urbano",
+      "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80",
+      "tags": [
+        "cidade",
+        "arquitetura"
+      ]
+    },
+    {
+      "id": "photo-2025-12-05",
+      "date": "2025-12-05",
+      "location": "Ateliê",
+      "caption": "Referências de cor e textura para ilustração.",
+      "theme": "processo-criativo",
+      "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80",
+      "tags": [
+        "arte",
+        "processo"
+      ]
+    }
+  ]
+}

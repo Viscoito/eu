@@ -1,0 +1,36 @@
+{
+  "entries": [
+    {
+      "id": "diary-2026-02-10",
+      "date": "2026-02-10",
+      "title": "Refino da base visual do portfólio",
+      "summary": "Ajustei contraste e blocos de conteúdo para facilitar leitura mobile sem perder a estética glassmorphism.",
+      "url": "#entrada-2026-02-10",
+      "tags": ["frontend", "ui", "portfolio"]
+    },
+    {
+      "id": "diary-2026-01-28",
+      "date": "2026-01-28",
+      "title": "Teste de pipeline com Live2D",
+      "summary": "Validei carregamento e responsividade do canvas do avatar, com ajustes de escala e foco por ponteiro.",
+      "url": "#entrada-2026-01-28",
+      "tags": ["live2d", "performance"]
+    },
+    {
+      "id": "diary-2025-12-20",
+      "date": "2025-12-20",
+      "title": "Semana de automações",
+      "summary": "Documentei um fluxo para reaproveitar prompts e snippets em tarefas repetitivas de produção.",
+      "url": "#entrada-2025-12-20",
+      "tags": ["automacao", "produtividade"]
+    },
+    {
+      "id": "diary-2025-11-11",
+      "date": "2025-11-11",
+      "title": "Pesquisa para galeria fotográfica",
+      "summary": "Organizei metadados mínimos para escalar uma galeria com filtros por tema e localização.",
+      "url": "#entrada-2025-11-11",
+      "tags": ["conteudo", "arquitetura"]
+    }
+  ]
+}

@@ -1,232 +1,110 @@
 <!doctype html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Victor Rodrigues Maciel | Portfolio</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="styles.css" />
-        <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.2/dist/browser/pixi.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/index.min.js"></script>
-    </head>
-    <body data-theme="dark">
-        <div class="bg-orb orb-a"></div>
-        <div class="bg-orb orb-b"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Rodrigues Maciel | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="dark">
+    <div class="bg-gradient"></div>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
 
-        <header class="topbar glass">
-            <a href="#home" class="brand">VRM</a>
-            <nav class="topnav" aria-label="Main sections">
-                <a href="#home" data-i18n="tabs.home">Home</a>
-                <a href="#about" data-i18n="tabs.about">Sobre</a>
-                <a href="#projects" data-i18n="tabs.projects">Projetos</a>
-                <a href="#gallery" data-i18n="tabs.gallery">Artes</a>
-                <a href="#vtuber" data-i18n="tabs.vtuber">VTuber</a>
-                <a href="#contact" data-i18n="tabs.contact">Contato</a>
-            </nav>
-            <div class="controls">
-                <label class="control" for="langSelect"
-                    ><span data-i18n="nav.language">Idioma</span>
-                    <select id="langSelect" aria-label="Language selector">
-                        <option value="pt">PT</option>
-                        <option value="en">EN</option>
-                        <option value="es">ES</option>
-                        <option value="ja">日本語</option>
-                    </select>
-                </label>
-                <button
-                    id="themeToggle"
-                    class="theme-toggle"
-                    type="button"
-                    data-i18n="nav.themeDark"
-                >
-                    🌙 Escuro
-                </button>
+    <header class="topbar glass">
+      <a href="index.html" class="brand">VRM</a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <details class="nav-dropdown">
+          <summary>Sobre</summary>
+          <div class="dropdown-menu">
+            <a href="about.html">Sobre mim</a>
+            <a href="diary.html">Diário</a>
+            <a href="contact.html">Contato</a>
+          </div>
+        </details>
+        <a href="projects.html">Projetos</a>
+        <details class="nav-dropdown">
+          <summary>Galeria</summary>
+          <div class="dropdown-menu">
+            <a href="gallery.html">Artes</a>
+            <a href="photos.html">Fotos</a>
+          </div>
+        </details>
+        <a href="commissions.html">Comissões</a>
+        <a href="vtuber.html">VTuber</a>
+      </nav>
+      <div class="controls">
+        <label class="control" for="langSelect"
+          ><span data-i18n="nav.language">Idioma</span>
+          <select id="langSelect" aria-label="Language selector">
+            <option value="pt">PT</option>
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+            <option value="ja">日本語</option>
+          </select>
+        </label>
+        <button id="themeToggle" class="theme-toggle" type="button" data-i18n="nav.themeDark">🌙 Escuro</button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero glass reveal">
+        <p class="pill">Desenvolvedor Criativo • Artista Digital</p>
+        <h1>Portfólio multipage</h1>
+        <p class="lead">
+          Agora com páginas separadas para diário, galeria, fotos, comissões e VTuber. A estrutura é orientada a dados para facilitar manutenção.
+        </p>
+        <div class="hero-quick">
+          <article>
+            <h3>Conteúdo dinâmico</h3>
+            <p>Entradas de diário, fotos, projetos e artes puxados de arquivos JSON.</p>
+          </article>
+          <article>
+            <h3>Navegação por categorias</h3>
+            <p>Menu superior com dropdown para Sobre e Galeria, deixando a navegação limpa.</p>
+          </article>
+          <article>
+            <h3>Fácil de expandir</h3>
+            <p>Adicione novos itens em <code>data/*.json</code> sem mexer no HTML.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="glass section reveal">
+        <div class="section-head">
+          <h2>Atualizações recentes</h2>
+          <p class="lead">Previews automáticos de diário, fotos e projetos.</p>
+        </div>
+        <div class="split-panels triple">
+          <article>
+            <div class="panel-head">
+              <h3>Diário</h3>
+              <a class="inline-link" href="diary.html">Ver tudo</a>
             </div>
-        </header>
+            <div id="homeDiaryPreview" class="preview-list"></div>
+          </article>
+          <article>
+            <div class="panel-head">
+              <h3>Fotos</h3>
+              <a class="inline-link" href="photos.html">Ver tudo</a>
+            </div>
+            <div id="homePhotosPreview" class="mini-photo-grid"></div>
+          </article>
+          <article>
+            <div class="panel-head">
+              <h3>Projetos</h3>
+              <a class="inline-link" href="projects.html">Ver tudo</a>
+            </div>
+            <div id="homeProjectsPreview" class="preview-list"></div>
+          </article>
+        </div>
+      </section>
+    </main>
 
-        <main class="wrap">
-            <section class="hero glass reveal" id="home">
-                <p class="pill" data-i18n="hero.badge">
-                    Desenvolvedor Criativo • Artista Digital
-                </p>
-                <h1>Victor Rodrigues Maciel</h1>
-                <p class="lead" data-i18n="hero.short">
-                    Crio soluções digitais que misturam lógica, estética e
-                    interatividade. Um resumo rápido aqui; detalhes nas seções
-                    abaixo.
-                </p>
-                <div class="hero-quick">
-                    <article>
-                        <h3 data-i18n="hero.q1">Código + Criatividade</h3>
-                        <p data-i18n="hero.q1d">
-                            Automação, web apps e arte digital no mesmo fluxo.
-                        </p>
-                    </article>
-                    <article>
-                        <h3 data-i18n="hero.q2">Pesquisa aplicada</h3>
-                        <p data-i18n="hero.q2d">
-                            Estudo antes de construir para reduzir retrabalho.
-                        </p>
-                    </article>
-                    <article>
-                        <h3 data-i18n="hero.q3">Live2D ready</h3>
-                        <p data-i18n="hero.q3d">
-                            Base preparada para integração com Cubism.
-                        </p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="glass section reveal" id="about">
-                <h2 data-i18n="about.title">Sobre mim</h2>
-                <p data-i18n="about.text1">
-                    Desde 2010, integro código e criatividade para criar
-                    ferramentas funcionais e experiências visuais de qualidade.
-                </p>
-                <p data-i18n="about.text2">
-                    Perfil autodidata, adaptação rápida em ambientes remotos e
-                    foco em transformar ideias em soluções objetivas.
-                </p>
-                <ul class="chips">
-                    <li>JavaScript / TypeScript</li>
-                    <li>React / Next.js</li>
-                    <li>HTML / CSS</li>
-                    <li>Chatbots e automações</li>
-                    <li>Pesquisa para apps e jogos</li>
-                    <li>Artes digitais</li>
-                    <li>Live2D</li>
-                </ul>
-            </section>
-
-            <section class="glass section reveal" id="projects">
-                <h2 data-i18n="projects.title">Projetos em destaque</h2>
-                <div class="cards">
-                    <article class="card">
-                        <h3 data-i18n="projects.p1.title">
-                            Bots para comunidades
-                        </h3>
-                        <p data-i18n="projects.p1.text">
-                            Chatbots para IRC com coleta de dados e melhoria de
-                            precisão.
-                        </p>
-                    </article>
-                    <article class="card">
-                        <h3 data-i18n="projects.p2.title">Fluxos com IA</h3>
-                        <p data-i18n="projects.p2.text">
-                            Refino de prompts/scripts para acelerar produção
-                            criativa e técnica.
-                        </p>
-                    </article>
-                    <article class="card">
-                        <h3 data-i18n="projects.p3.title">
-                            Pipeline de arte + Live2D
-                        </h3>
-                        <p data-i18n="projects.p3.text">
-                            Assets visuais e modelos Live2D com padrão de
-                            qualidade.
-                        </p>
-                    </article>
-                    <article class="card">
-                        <h3 data-i18n="projects.p4.title">
-                            Sites com visual premium
-                        </h3>
-                        <p data-i18n="projects.p4.text">
-                            Interfaces fluidas inspiradas na Apple com foco em
-                            experiência.
-                        </p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="glass section reveal" id="gallery">
-                <h2 data-i18n="gallery.title">Galeria de artes</h2>
-                <p data-i18n="gallery.text">
-                    Galeria maior para ilustrações, concept art e renders.
-                </p>
-                <div class="gallery large-gallery">
-                    <figure class="gallery-item tall">
-                        <span>🎨</span>
-                        <figcaption>Artwork 01</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <span>🖌️</span>
-                        <figcaption>Artwork 02</figcaption>
-                    </figure>
-                    <figure class="gallery-item wide">
-                        <span>✨</span>
-                        <figcaption>Artwork 03</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <span>🌈</span>
-                        <figcaption>Artwork 04</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <span>🧪</span>
-                        <figcaption>Artwork 05</figcaption>
-                    </figure>
-                    <figure class="gallery-item tall">
-                        <span>🌙</span>
-                        <figcaption>Artwork 06</figcaption>
-                    </figure>
-                </div>
-            </section>
-
-            <section class="glass section reveal" id="vtuber">
-                <h2 data-i18n="vtuber.title">VTuber Live2D</h2>
-                <p data-i18n="vtuber.text">
-                    Integração preparada: se você adicionar um arquivo
-                    `assets/live2d/model.model3.json`, o site tenta carregar
-                    automaticamente um canvas para interação.
-                </p>
-                <div class="vtuber-stage" id="vtuberStage">
-                    <canvas
-                        id="vtuberCanvas"
-                        aria-label="VTuber canvas"
-                    ></canvas>
-                    <p
-                        id="vtuberStatus"
-                        class="small"
-                        data-i18n="vtuber.statusIdle"
-                    >
-                        Aguardando modelo Live2D local.
-                    </p>
-                </div>
-                <p class="small" data-i18n="vtuber.hint">
-                    Dica: por limitação de acesso remoto, o repo externo pode
-                    falhar; então deixei fallback local pronto.
-                </p>
-            </section>
-
-            <section class="glass section reveal" id="contact">
-                <h2 data-i18n="contact.title">Contato</h2>
-                <p data-i18n="contact.text">
-                    Vamos conversar sobre freelas, projetos, arte digital ou
-                    Live2D.
-                </p>
-                <div class="contact-list">
-                    <a href="mailto:victormaa@hotmail.com"
-                        >victormaa@hotmail.com</a
-                    >
-                    <a
-                        href="https://linkedin.com/in/victormaciel"
-                        target="_blank"
-                        rel="noreferrer"
-                        >linkedin.com/in/victormaciel</a
-                    >
-                </div>
-                <button id="btnTrocarHaru">Haru</button>
-                <button id="btnTrocarHiyori">Hiyori</button>
-            </section>
-        </main>
-
-        <canvas id="canvas" aria-label="Live2D VTuber avatar"></canvas>
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+  </body>
 </html>
